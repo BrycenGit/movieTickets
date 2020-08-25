@@ -21,17 +21,27 @@ Receipt.prototype.calculateCost = function () {
   }
   return baseCost;
 };
-//let test = new Receipt("somethingelse", "3pm", "senior"); <== way to test 
+//let test = new Receipt("somethingelse", "3pm", "senior"); <== way to test
 //alert(test.cost);
 
-function
+function showReceipt(newReceipt) {
+  //<== pass newReceipt into the ()
+  $(".receipt").show();
+  $("#movie-name").text(newReceipt.movie);
+  $("#movie-time").text(newReceipt.time);
+  $("#movie-cost").text(newReceipt.cost);
+}
 
-$(document).ready(function() {
-  $('#movie-select').submit(function(event) {
+$(document).ready(function () {
+  $("#movie-select").submit(function (event) {
     event.preventDefault();
-    const inputtedMovie =$("select#movie").val();
-    const inputtedTime =$("select#time").val();
-    const inputtedAge =$("select#age").val();
+    const inputtedMovie = $("#movie").val();
+    let inputtedTime = $("#time").val();
+    let inputtedAge = $("#age").val();
+    // console.log(inputtedAge, inputtedMovie, inputtedTime);
     let newReceipt = new Receipt(inputtedMovie, inputtedTime, inputtedAge);
-  })
-})
+    //console.log(newReceipt);
+    showReceipt(newReceipt);
+    //console.log(newReceipt);
+  });
+});

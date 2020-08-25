@@ -11,24 +11,24 @@
     <div class="container">
       <h1>Movie Tickets</h1>
       <form id="movie-select">
-        <label name="movie">Movies</label>
+        <label for="movie">Movies</label>
         <select id="movie" name="movie">
-          <option value="primo">Fast & Furious 20</option>
+          <option value="Fast & Furious 20">Fast & Furious 20</option>
           <option value="Minions 3">Minions 3</option>
           <option value="Harry Potter Next Gen">Harry Potter Next Gen</option>
           <option value="John wick 4">John wick 4</option>
         </select>
-        <label name="time">Movie Times</label>
+        <label for="time">Movie Times</label>
         <select id="time" name="time">
-          <option value="">3pm</option>
-          <option value="">6pm</option>
-          <option value="">9pm</option>
+          <option value="3pm">3pm</option>
+          <option value="6pm">6pm</option>
+          <option value="9pm">9pm</option>
         </select>
-        <label name="age">Age Group</label>
+        <label for="age">Age Group</label>
         <select id="age" name="age">
-          <option value="">regular</option>
-          <option value="">junior 18&Under</option>
-          <option value="">senior 55+</option>
+          <option value="regular">regular</option>
+          <option value="junior">junior 18&Under</option>
+          <option value="senior">senior 55+</option>
         </select>
         <button type="submit" class="btn btn-outline-danger">Buy Now!</button>
       </form>
@@ -36,8 +36,10 @@
       <div class="receipt">
         <p>
           Thank you for choosing <span id="movie-name"></span> at
-          <span id="movie-time"></span>. Please enjoy! Your total is
-          <span id="movie-cost"></span>.
+          <span id="movie-time"></span>. Please enjoy! Your total is $<span
+            id="movie-cost"
+          ></span
+          >.
         </p>
       </div>
     </div>
